@@ -23,6 +23,7 @@ public class StudentServiceImp implements StudentService{
         student.setName(request.getName());
         student.setBirthDate(request.getBirthDate());
         student.setDocument(request.getDocument());
+        student.setSecondKey(UUID.randomUUID().toString());
 
         studentRepository.save(student);
 
@@ -34,7 +35,6 @@ public class StudentServiceImp implements StudentService{
 
         StudentResponse response = new StudentResponse();
         response.setId(student.getId());
-        response.setSecondKey(UUID.randomUUID().toString());
         response.setName(student.getName());
         response.setDocument(student.getDocument());
         response.setBirthDate(student.getBirthDate());
