@@ -11,6 +11,9 @@ public class Student {
 
     @Id
     private String id;
+
+    @Id
+    private String secondKey;
     private String name;
     private LocalDate birthDate;
     private String document;
@@ -45,5 +48,13 @@ public class Student {
 
     public void setDocument(String document) {
         this.document = document;
+    }
+
+    public String getSecondKey() {
+        return secondKey;
+    }
+
+    public void setSecondKey(String secondKey) {
+        this.secondKey = secondKey;
     }
 }

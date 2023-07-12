@@ -5,9 +5,19 @@ import java.time.LocalDate;
 public class StudentResponse {
 
     private String id;
+
+    private String secondKey;
     private String name;
     private LocalDate birthDate;
     private String document;
+
+    public String getSecondKey() {
+        return secondKey;
+    }
+
+    public void setSecondKey(String secondKey) {
+        this.secondKey = secondKey;
+    }
 
     public String getId() {
         return id;

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class StudentServiceImp implements StudentService{
@@ -33,9 +34,11 @@ public class StudentServiceImp implements StudentService{
 
         StudentResponse response = new StudentResponse();
         response.setId(student.getId());
+        response.setSecondKey(UUID.randomUUID().toString());
         response.setName(student.getName());
         response.setDocument(student.getDocument());
         response.setBirthDate(student.getBirthDate());
+
 
         return response;
     }
